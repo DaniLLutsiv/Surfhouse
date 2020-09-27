@@ -1,0 +1,45 @@
+.section{
+	height: 500px;
+	background-color: #eaeaea;
+}
+.Top{
+	padding-top: 51px;
+	padding-left: 38.461538461538461538461538461538%;
+	display: flex;
+	height: 54px;
+	font-size: 22px;
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 700;
+}
+.Top h1{
+	margin: 4px 0 0 0;
+	font-size: 18px;
+}
+.Top img{
+	height: 28px;
+	width: 28px;
+	margin-right: 8px;
+}
+.Center{
+	height: 245px;
+	display: flex;
+	justify-content: space-between;
+}
+.img{
+	height: 184px;
+	width: 184px;
+	background-color: #fff;
+}
+.img img{
+	width: 170px;
+	height: 170px;
+	margin: 7px ;
+}
+.Bottom{
+	height: 150px;
+}
+.Bottom img{
+	height: 150px;
+	width: 33.3333333%;
+}

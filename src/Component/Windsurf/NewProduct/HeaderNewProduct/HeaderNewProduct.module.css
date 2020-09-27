@@ -1,0 +1,42 @@
+.section{
+	background-color: #fff;
+	height: 78px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+
+}
+.Text{
+	font-family: Roboto;
+	font-style:  italic;
+	font-size: 22px;
+	padding-top: 30px;
+	color: #707070;
+	text-transform: uppercase;
+	font-weight: 900;	
+	margin-left: 25px;	
+}
+.Buttons{
+	padding-top: 25px;
+	width: 70px;
+	height: 30px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.Button{
+	height: 20px;	
+	color: #707070;
+	font-size: 24px;
+	width: 20px;
+	cursor: pointer;
+}
+.Button:hover{
+	color: red;
+	transition-duration: 1s;
+}

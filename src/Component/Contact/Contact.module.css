@@ -1,0 +1,183 @@
+header{
+	width: 1170px;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+.Top{
+	background-image: url(contact.jpg);
+	height: 350px;
+}
+.White{
+	width: 1170px;
+	margin: auto;
+	display: flex;
+	margin-bottom: 122px;
+	font-family: Roboto;
+	font-size: 12px;
+}
+.Instagram,.Bottom{
+	width: 1170px;
+	margin: auto;
+}
+.Instagram img{
+	width: 33.333333333%;
+	height: 150px;
+}
+.Instagram{
+	height: 150px;
+}
+
+.Gray{
+	background-color: #373737;
+}
+.Gray2{
+	background-color: #282828;
+}
+.Head_txt, .NavLink{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: Roboto;
+  color: #999999;
+  margin-bottom: 47px;
+}
+.Head_txt_L{
+  display: flex;
+}
+.yellow{
+  background-color: yellow;
+  height: 15px;
+}
+.Right{
+	width: 844px;
+	margin-left: 56px;
+	margin-top: 18px;
+}
+
+/* Header*/
+.Left_Header{
+	width: 130px;
+	font-weight: 900;
+	font-family: Roboto;
+	font-size: 22px;
+	margin-top: 22px;
+	margin-left: 80px;
+}
+
+.logo img{
+	margin-left: 23px;
+	width: 77px;
+	height: 87px;
+}
+.Right_Header{
+	width: 220px;
+	color:white;
+	font-size: 14px;
+}
+.Right_Header img{
+	height: 16px;
+	width: 16px;
+	margin-right: 11px;
+}
+.img_Header{
+	background-color: #c5c5c5;
+	height: 20px;
+	padding-top: 4px;
+	margin-left: 16px;
+	margin-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.img_Header div{
+	margin-top: -2px;
+}
+.Nav{
+	margin-bottom: 50px;
+}
+.Contact{
+	height: 340px;
+	display: flex;
+}
+.Name{
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+.txt{
+	color: #aaaaaa;
+	width: 335px;
+	padding-top: 5px;
+	padding-left: 15px;
+	height: 20px;
+	border: 1px solid #efefef;
+	margin-bottom: 33px;
+}
+.Contact_Left{
+	width: 385px;
+	border-right: 1px solid #efefef;
+}
+.Contact_Right{
+	margin-left: 30px;
+}
+.Address{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.Location{
+	height: 30px;
+	display: flex;
+}
+.Location div{
+	width: 156px;
+	margin-left: 8px;
+	color: #777777;
+}
+.Location img{
+	height: 21px;
+	width: 14px;
+}
+.text{
+	width: 163px;
+	color: #777777;
+	margin-top: 3px;
+	margin-bottom: 21px;
+}
+.Phone{
+	display: flex;
+	font-size: 20px;
+	margin-bottom: 18px;
+}
+.Phone img{
+	margin-left: -5px;
+	margin-right: 7px;
+	margin-top: 4px;
+	height: 18px;
+	width: 22px;
+}
+.Email{
+	display: flex;
+	font-size: 16px;
+	text-decoration: underline;
+	margin-bottom: 30px;
+}
+.Email img{
+	margin-left: -5px;
+	margin-right: 7px;
+	width: 25px;
+	height: 17px;
+}
+.message{
+	font-size: 14px;
+	width: 300px;
+}
+.Brand{
+	margin-top: 300px;
+}

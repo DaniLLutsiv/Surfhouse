@@ -1,0 +1,11 @@
+.section{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 65px;
+}
+.section div{
+	font-size: 26px;
+	font-weight: 700;
+	color: #bababa;
+	text-transform: uppercase;
+}

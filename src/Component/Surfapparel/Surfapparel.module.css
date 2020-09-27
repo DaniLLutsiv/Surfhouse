@@ -1,0 +1,205 @@
+.Blue{
+  background-color: #abeafa;
+  height: 350px;
+}
+.Gray{
+  background-color: #373737;  
+}
+.Gray2{
+  background-color: #333333;  
+}
+.White{
+  width: 1170px;
+  margin: 0 auto;
+}
+.Top{
+  width: 1170px;
+  margin: 0 auto;
+}
+.Center{
+  width: 1170px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.Right{
+  width: 100%;
+  margin-left: 40px;
+  margin-top: 38px;
+}
+.Bottom{
+  width: 1170px;
+  margin: 0 auto;
+}
+.Banner{
+  margin-top: 40px;
+}
+.Nav{
+  margin-bottom: 21px;
+}
+.Other{
+  margin-top: 35px;
+  margin-bottom: 56px;
+}
+.Head_txt, .NavLink{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: Roboto;
+  color: #999999;
+  margin-bottom: 47px;
+}
+.Head_txt_L{
+  display: flex;
+}
+.yellow{
+  background-color: yellow;
+  height: 15px;
+}
+.Setting{
+  display: flex;
+  justify-content: space-between;
+}
+.Setting{
+  font-size: 12px;
+  margin-right: 10px;
+  color: #333333;
+}
+.Setting div{
+  text-transform: uppercase;
+} 
+select{
+  width: 100px;
+  height: 19px;
+  border-color: #d6d4d4;
+}
+.Square{
+  height: 7px;
+  width: 7px;
+}
+.Flex{
+  display: flex;
+}
+.Block{
+  display: block;
+}
+.MR{
+  margin-right: 10px;
+}
+.Sq{
+  width: 4px;
+  height: 4px;
+}
+.Rectangle{
+  height: 4px;
+  width: 10px;
+}
+.Sq, .Rectangle, .Square{
+  background-color: #c0c0c0;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+.Sq, .Rectangle, .Square{
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+.Cursor{
+  display: flex;
+  cursor:pointer; 
+}
+.Cursor:hover .Square, .Cursor:hover .Sq, .Cursor:hover .Rectangle{
+  background-color: #26d2fc; 
+}
+.Overflow{
+    overflow: hidden;
+    margin-top: 28px;
+}
+.Page ,.ActivePage{
+  cursor: pointer;
+  text-align: center;
+  padding-top: 1px;
+  width: 20px;
+  height: 19px;
+}
+.ActivePage{
+  background-color: #26d2fc;
+  color: white;
+}
+.slideUp{
+  display: flex;
+    flex-wrap: wrap;
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;    
+ 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+ 
+    animation-timing-function: ease;    
+    -webkit-animation-timing-function: ease;
+ 
+    visibility: visible !important;         
+}
+.arrow{
+  height: 20px;
+  width: 20px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.Button{
+  height: 20px;
+  width: 20px;
+}
+.Instagram{
+  margin-top: 80px;
+  height: 150px;
+}
+.Instagram img{
+  height: 150px;
+  width: 33.3333333%;
+}
+ 
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateY(-8%);
+    }
+    65%{
+        transform: translateY(4%);
+    }
+    80%{
+        transform: translateY(-4%);
+    }
+    95%{
+        transform: translateY(2%);
+    }           
+    100% {
+        transform: translateY(0%);
+    }   
+}
+ 
+@-webkit-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+    }
+    50%{
+        -webkit-transform: translateY(-8%);
+    }
+    65%{
+        -webkit-transform: translateY(4%);
+    }
+    80%{
+        -webkit-transform: translateY(-4%);
+    }
+    95%{
+        -webkit-transform: translateY(2%);
+    }           
+    100% {
+        -webkit-transform: translateY(0%);
+    }   
+}

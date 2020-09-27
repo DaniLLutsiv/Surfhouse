@@ -1,0 +1,32 @@
+.section{
+	height: 332px;
+	margin-top: 85px;
+	width: 270px;
+}
+.section h2{
+	margin: 0;
+	font-weight: 900;
+	font-size: 24px;;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 36px;
+	font-style:  italic;
+	height: 14px;
+}
+.list div{
+	height: 14px;
+	font-size: 14px;;
+	font-family: 'Roboto', sans-serif;
+	color: #555555;
+	font-weight: 400;
+	margin-bottom: 18px;
+	font-style:  italic;
+}
+
+.View{
+	font-size: 14px;
+	font-weight: 900;
+	margin-top: 8px;
+	cursor: pointer;
+	font-style:  italic;
+}
+

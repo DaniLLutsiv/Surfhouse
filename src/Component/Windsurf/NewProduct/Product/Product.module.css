@@ -1,0 +1,76 @@
+.section{
+	height: 275px;
+	width: 265px;
+	font-family: Roboto;
+	margin-bottom: 70px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.Image{
+	position: relative;
+	height: 240px;
+	width: 265px;
+}
+.Image img{
+	margin-top: 10px;
+	margin-left: 10px;
+	height: 230px;
+	width: 250px;
+}
+.corner, .cornerY{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 23px solid transparent; 
+	border-top: 23px solid #e24602; 
+	border-right: 23px solid #e24602;
+}
+.corner div, .cornerY div{
+	color: white;
+	font-size: 9px;
+	position: absolute;
+	top: -12px;
+	left: 0px;
+}
+.cornerY div{
+	color: black;
+}
+.cornerY{
+	border-top: 23px solid #faef03; 
+	border-right: 23px solid #faef03;
+}
+
+.Texts{
+	font-style: italic;
+	color: #333333;
+	font-weight: 700;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 20px;
+	padding-top: 20px;
+}
+.Text{
+	width: 160px;
+	height: 40px;
+	font-size: 14px;
+	margin-left: 25px;
+}
+.Prise{
+	font-size: 18px;
+}
+.Sale{
+	color: #e24602;
+	font-size: 14px;
+	text-decoration: line-through;
+	margin-left: 7px;
+}
+.Bottom{
+	height: 150px;
+}
+.Bottom img{
+	height: 150px;
+	width: 33%;
+}

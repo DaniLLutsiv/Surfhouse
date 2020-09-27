@@ -1,0 +1,27 @@
+.section{
+	height: 28px;
+	padding-top: 20px;
+	font-size: 12px;
+	font-family: Roboto;
+	color: #dad9d9;
+}
+.Bottom{
+	display: flex;
+	justify-content: space-between;
+}
+.img{
+	background-blend-mode: screen;
+	width: 200px;
+	height: 16px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.Bottom img{
+	mix-blend-mode: Darken,color-burn;
+	height: 16px;
+	width: 16px;
+	margin-right: 11px;
+}

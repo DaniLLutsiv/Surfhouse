@@ -1,0 +1,22 @@
+img{
+	width: 270px;
+	height: 300px;
+}
+
+.section{
+	position: relative;
+	height: 300px;
+}
+.text{
+	position: absolute;
+	left: 140px;
+	top: 130px;
+	font-family: raleway;
+	font-style: italic;
+	font-weight: 900;
+	font-size: 36px;
+}
+a{	
+	color:black;
+	text-decoration: none;
+}

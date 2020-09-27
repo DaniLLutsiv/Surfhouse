@@ -1,0 +1,271 @@
+.section{
+	height: 523px;
+	background-color: #abeafa;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.Left{
+	margin-bottom: 64px;
+	height: 460px;
+	width: 270px;
+}
+.Slide_number{
+	margin-bottom: 64px;
+	margin-left: 19.65811965811965811965811965812%;
+	width: 170px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-self:flex-end;
+	padding-left: 13px;
+}
+.LineRed{
+	width: 40px;
+	height: 4px;
+	background-color: #fb4d01;
+	margin-right: 10px;
+}
+.Line{
+	width: 40px;
+	height: 4px;
+	background-color: #fbde06;
+	margin-right: 10px;
+}
+.Right{
+	width: 40.17094017094017094017094017094%;
+	height: 460px;
+	margin-left: 2.5641025641025641025641025641026%;
+}
+.Slide{
+	margin-left: 10.434782608695652173913043478261%;
+	font-size: 18px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.Slide h2{
+	font-size: 48px;
+	margin: 0;
+	text-transform: uppercase;
+
+	animation-name: pulse;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+@keyframes pulse{
+	0%{color: #fbde06}
+	50%{color: orange}
+	100%{color: #fbde06}
+}
+
+.Text{
+	font-family: raleway;
+	font-style: normal;
+	color: #fbde06;
+	width: 72.173913043478260869565217391304%;
+	margin-top: 64px;
+}
+.Buttons{
+	margin-top: 135px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.Button, .ButtonR{
+	cursor: pointer;
+	width: 30px;
+	height: 50px;
+	background-color: #fff;
+}
+.ButtonR{
+	background-color: #fbde06;	
+}
+.arrow{
+	font-size: 50px;
+	height: 50px;
+	margin-top: -16px;
+	margin-left: 7px;
+}
+.Buy{
+	cursor: pointer;
+	margin-left: 10.434782608695652173913043478261%;
+	margin-top: 65px;
+	width: 125px;
+	height: 50px;
+	background-color:#fbde06;
+	position: relative;
+
+}
+
+.Buy:hover{
+	animation-name: Top;
+	animation-duration: .5s;
+	animation-iteration-count: inherit;
+}
+
+@keyframes Top{
+	0%{margin-top: 65px;}
+	50%{margin-top: 55px;}
+	100%{margin-top: 65px;}
+}
+.BuyText{
+	font-family: raleway;
+	position: absolute;
+	left: 25px;
+	top: 15px;
+	font-weight: 700;
+}
+.Search{
+	width: 270px;
+	height: 150px;
+	margin-bottom: 9px;
+}
+.Log{
+	height: 27px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	background-color: #fff;
+}
+.Log div{
+	margin-top: 5px;
+	color: #fb4d01;
+	font-family: raleway;
+	font-weight: 300;
+}
+.Cart{
+	height: 89px;
+	background-color: #fb4d01;
+	font-family: raleway;
+}
+.Edit img{
+	width: 39px;
+	height: 35px;
+}
+.Edit{
+	margin-left: 26px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding-top: 15px;
+	height: 35px;
+	margin-bottom: 23px;
+}
+.Prise{
+	margin-left: 16px;
+	width: 80px;
+	margin-right: 65px;
+	font-weight: 700;
+	font-size: 18px;
+	color: white;
+}
+.Prise_text{
+	color: #faef03;
+	font-size: 12px;
+}
+.X{
+	margin-top: 5px;
+	font-family: raleway;
+	font-weight: 300;
+	font-size: 10px;
+	color: #333333;
+	cursor: pointer;
+}
+.X img{
+	height: 14px;
+	width: 14px;
+}
+
+.view{
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: white;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.search{
+	height: 34px;
+	background-color: #fff;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.search_block{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 236px;
+	justify-content: space-between;
+}
+.search_block div,.search_block img{
+	margin-top: 5px;
+	margin-left: 12px;
+}
+.search_block img{
+	cursor: pointer;
+	height: 9px;
+	width: 9px;
+	margin-right: 9px;
+}
+.img_search{
+	margin-bottom: 9px;
+	margin-left: 2px;
+	height: 9px;
+	width: 9px;
+}
+.search_img{
+	cursor: pointer;
+	width: 34px;
+	height: 34px;
+	background-color: #333333;
+}
+.search_img img{
+	margin-left: 11px;
+	margin-top: 11px;
+	height: 13px;
+	width: 12px;
+}
+.Banner{
+	height: 300px;
+	background-color: #fff51f;
+	padding-left: 25px;
+	font-family: raleway;
+	font-style: italic;
+	font-weight: 700;
+}
+.Banner_block{
+	width: 215px;
+}
+.Banner_block h2{
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 30px;
+	padding-top: 82px;
+}

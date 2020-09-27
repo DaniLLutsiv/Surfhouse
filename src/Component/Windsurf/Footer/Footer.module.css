@@ -1,0 +1,78 @@
+.section{
+	height: 300px;
+	color: #fff;
+	font-size: 12px;
+	font-family: Roboto;
+	font-weight: 300;
+	color: #b9b9b9;
+}
+
+.Top{
+	padding-top: 75px;
+	display: flex;
+	height: 225px;
+	background-color: #373737;
+}
+.Elem{
+	width: 165px;
+	margin-left: 25px;
+}
+.Elem div{
+	margin-bottom: 2px;
+}
+.Elem h2, .SuperElem h2{
+	color: #fff;
+	font-family: Raleway;
+	font-weight: 900;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+.SuperElem h2{
+	margin-bottom: 5px;
+}
+.Bottom{
+	height: 48px;
+	background-color: #333333;
+}
+.SuperElem{
+	width: 262px;
+	padding-left: 38px;
+}
+.SE_txt{
+	width: 200px;
+}
+.Search{
+	margin-top: 20px;
+	width: 250px;
+	height: 30px;
+	display: flex;
+}
+.Left{
+	width: 180px;
+	background-color: #fff51f;
+	height: 30px;
+}
+.Left div{
+	margin-top: 8px;
+	margin-left: 21px;
+	color: #b4ad29;
+}
+.Right{
+	cursor: pointer;
+	width: 70px;
+	height: 30px;
+	background-color: black;
+}
+.Right div{
+	margin-top: 8px;
+	margin-left: 14px;
+	color: #fff;
+}
+.txt{
+	font-size: 14px;
+	display: flex;
+}
+.txt div{
+	color: #faef03;
+}
+
