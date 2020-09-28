@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect,useState } from 'react'
 import classes from '../Surfapparel/Surfapparel.module.css'
 import CurrentElement from './CurrentElement'
 import Header from '../Windsurf/Header/Header';
@@ -11,13 +11,26 @@ import Banner from '../Windsurf/Nav/Banner/Banner';
 import Footer from '../Windsurf/Footer/Footer';
 import Footer2 from '../Windsurf/Footer/Footer2';
 import { connect } from 'react-redux'
-import {NavLink} from "react-router-dom";
+import {NavLink,useParams} from "react-router-dom";
 import { ChangeUrl } from '../../redux/NavReducer';
 import { NewActiveSlideProduct,QuantityChange,ActiveTabsChange } from '../../redux/ProductReducer';
 import {AddProductToCart} from '../../redux/CartReducer'
 
 const CurrentElementContainer = (props) =>{
   
+  let { TypeProduct,id } = useParams()
+  if (!TypeProduct) {TypeProduct = 'SurfProduct'}
+  let data = props[TypeProduct][Number(id-1)]
+  
+  useEffect(() => {
+    window.scrollTo(0, 350);
+  }, [data]);
+
+  let [Img,ChangeActiveImg] = useState({
+    Big_img:data.img,
+    Smalls_img:data.Small_img
+  })
+
   return <section className={classes.section}>
     <div className={classes.Blue}>
           <div className={classes.Top}>
@@ -45,7 +58,7 @@ const CurrentElementContainer = (props) =>{
               <NavLink className={classes.NavLink} to="/" onClick={() => {props.ChangeUrl('','')}}>&#171; Back to previous page</NavLink>
             </div>
 
-              <CurrentElement SurfProduct={props.SurfProduct} LengthSurfApparel={props.LengthSurfApparel} SaleProducts={props.SaleProducts}
+              <CurrentElement data={data} Img={Img} ChangeActiveImg={ChangeActiveImg} SurfProduct={props.SurfProduct} LengthSurfApparel={props.LengthSurfApparel} SaleProducts={props.SaleProducts}
               TopProducts={props.TopProducts} ActivePageSale={props.ActivePageSale} ActivePageTop={props.ActivePageTop} AddProductToCart={props.AddProductToCart}
               Quantity={props.Quantity} ActiveTabs={props.ActiveTabs} NewProducts={props.NewProducts} ChangeUrl={props.ChangeUrl} QuantityChange={props.QuantityChange}
               NewActiveSlideProduct={props.NewActiveSlideProduct} ChangeLengthSurfApparel={props.ChangeLengthSurfApparel} ActiveTabsChange={props.ActiveTabsChange}/>

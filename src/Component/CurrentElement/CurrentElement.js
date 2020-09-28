@@ -1,41 +1,26 @@
-import React,{ useEffect,useState } from 'react'
+import React from 'react'
 import classes from './CurrentElement.module.css'
-import {useParams} from "react-router-dom";
 import Product from '../Windsurf/NewProduct/Product/Product';
 
 const CurrentElement = (props) =>{
-  
-  
-  let { slug,id } = useParams()
-  if (!slug) {slug = 'SurfProduct'}
-  let str = props[slug][Number(id-1)]
-
-  useEffect(() => {
-    window.scrollTo(0, 350);
-  }, [str]);
-
-  let [Img,ChangeActiveImg] = useState({
-    Big_img:str.img,
-    Smalls_img:str.Small_img
-  })
 
   return <section className={classes.section}>
     <div className={classes.Top}>
       <div className={classes.Left}>
-        <div className={classes.Img}><img src={Img.Big_img} alt="" /></div>
+        <div className={classes.Img}><img src={props.Img.Big_img} alt="" /></div>
         <div className={classes.Img_slider}>
-          <div className={classes.Button} onClick={() => {ChangeActiveImg({
-              Smalls_img: [Img.Smalls_img[1],Img.Big_img],
-              Big_img: Img.Smalls_img.shift()          
+          <div className={classes.Button} onClick={() => {props.ChangeActiveImg({
+              Smalls_img: [props.Img.Smalls_img[1],props.Img.Big_img],
+              Big_img: props.Img.Smalls_img.shift()          
             })}}>
             <div className={classes.arrowL}></div>
           </div>
           <div className={classes.Small_Img}>
-            {Img.Smalls_img.map(el => <img src={el} alt="" key={el}/>)}
+            {props.Img.Smalls_img.map(el => <img src={el} alt="" key={el}/>)}
           </div>
-          <div className={classes.Button} onClick={() => {ChangeActiveImg({
-              Smalls_img: [Img.Big_img,Img.Smalls_img[0]],
-              Big_img: Img.Smalls_img.pop()          
+          <div className={classes.Button} onClick={() => {props.ChangeActiveImg({
+              Smalls_img: [props.Img.Big_img, props.Img.Smalls_img[0]],
+              Big_img: props.Img.Smalls_img.pop()          
             })}}>
             <div className={classes.arrowR} ></div>
           </div>
@@ -43,9 +28,9 @@ const CurrentElement = (props) =>{
       </div>
       <div className={classes.Right}>
         <div>
-          <h2>{str.text}</h2>
+          <h2>{props.data.text}</h2>
           <div className={classes.stars}>
-            <div>{str.Star.map((el,index) => {
+            <div>{props.data.Star.map((el,index) => {
                 if(el === 1){
                   return <div key={index}>&#9733;</div>
                 }else{
@@ -56,10 +41,10 @@ const CurrentElement = (props) =>{
             <div className={classes.Review}> &nbsp;1 Review(s) | Add Your Review</div>
           </div>
           <div className={classes.description}>
-            <div className={classes.Prise}>{str.Prise}</div>
+            <div className={classes.Prise}>{props.data.Prise}</div>
             <div>
-              <div className={classes.Greytxt}>Product code: <div className={classes.text}>&nbsp;{str.id}</div></div>
-              <div className={classes.Greytxt}>Availability: <div className={classes.text}>&nbsp;{str.Availability}</div></div>
+              <div className={classes.Greytxt}>Product code: <div className={classes.text}>&nbsp;{props.data.id}</div></div>
+              <div className={classes.Greytxt}>Availability: <div className={classes.text}>&nbsp;{props.data.Availability}</div></div>
             </div>
           </div>
         </div>
@@ -71,21 +56,21 @@ const CurrentElement = (props) =>{
         <div className={classes.Size}>
           <div className={classes.Quick}>Size:</div>
           <div className={classes.Sizes}>
-            {str.Size === 25 ? <div className={classes.Red}>25</div>:<div>25</div>}
-            {str.Size === 26 ? <div className={classes.Red}>26</div>:<div>26</div>}
-            {str.Size === 27 ? <div className={classes.Red}>27</div>:<div>27</div>}
-            {str.Size === 28 ? <div className={classes.Red}>28</div>:<div>28</div>}
-            {str.Size === 29 ? <div className={classes.Red}>29</div>:<div>29</div>}
-            {str.Size === 30 ? <div className={classes.Red}>30</div>:<div>30</div>}
-            {str.Size === 31 ? <div className={classes.Red}>31</div>:<div>31</div>}
-            {str.Size === 32 ? <div className={classes.Red}>32</div>:<div>32</div>}
-            {str.Size === 33 ? <div className={classes.Red}>33</div>:<div>33</div>}
+            {props.data.Size === 25 ? <div className={classes.Red}>25</div>:<div>25</div>}
+            {props.data.Size === 26 ? <div className={classes.Red}>26</div>:<div>26</div>}
+            {props.data.Size === 27 ? <div className={classes.Red}>27</div>:<div>27</div>}
+            {props.data.Size === 28 ? <div className={classes.Red}>28</div>:<div>28</div>}
+            {props.data.Size === 29 ? <div className={classes.Red}>29</div>:<div>29</div>}
+            {props.data.Size === 30 ? <div className={classes.Red}>30</div>:<div>30</div>}
+            {props.data.Size === 31 ? <div className={classes.Red}>31</div>:<div>31</div>}
+            {props.data.Size === 32 ? <div className={classes.Red}>32</div>:<div>32</div>}
+            {props.data.Size === 33 ? <div className={classes.Red}>33</div>:<div>33</div>}
           </div>
         </div>
         <div className={classes.Size}>
           <div className={classes.Quick}>Length:</div>
           <div className={classes.Length}>
-            {str.Length.map((el,index) => <div key={index}>{el}</div>)}
+            {props.data.Length.map((el,index) => <div key={index}>{el}</div>)}
           </div>
         </div>
         <div className={classes.Size}>
@@ -99,7 +84,7 @@ const CurrentElement = (props) =>{
               </div>
             </div>
             <div className={classes.ADD_TO_CART}>
-              <div onClick={ () => {props.AddProductToCart(str,props.Quantity)}}>ADD TO CART</div>
+              <div onClick={ () => {props.AddProductToCart(props.data,props.Quantity)}}>ADD TO CART</div>
             </div>
             <div className={classes.ADD_Setting}>
               <div>+  Add to Wishlist</div>
@@ -112,10 +97,14 @@ const CurrentElement = (props) =>{
     </div>
     <div className={classes.Middle}>  
       <div className={classes.Mid_header}>
-        {props.ActiveTabs === 1 ? <div className={classes.ActiveTabs}>Product description</div> : <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(1)}>Product description</div>}
-        {props.ActiveTabs === 2 ? <div className={classes.ActiveTabs}>Additional information</div> : <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(2)}>Additional information</div>}
-        {props.ActiveTabs === 3 ? <div className={classes.ActiveTabs}>reviews</div> : <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(3)}>reviews</div>}
-        {props.ActiveTabs === 4 ? <div className={classes.ActiveTabs}>Product tags</div> : <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(4)}>Product tags</div>}
+        {props.ActiveTabs === 1 ? <div className={classes.ActiveTabs}>Product description</div> : 
+          <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(1)}>Product description</div>}
+        {props.ActiveTabs === 2 ? <div className={classes.ActiveTabs}>Additional information</div> : 
+          <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(2)}>Additional information</div>}
+        {props.ActiveTabs === 3 ? <div className={classes.ActiveTabs}>reviews</div> : 
+          <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(3)}>reviews</div>}
+        {props.ActiveTabs === 4 ? <div className={classes.ActiveTabs}>Product tags</div> : 
+          <div className={classes.Tabs} onClick={() => props.ActiveTabsChange(4)}>Product tags</div>}
       </div>  
       <div className={classes.Maddle_txt}>   
         <div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words. <br/>Which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing<br/> hidden in the  <br/>middle of text.</div>
