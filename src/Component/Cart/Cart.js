@@ -5,12 +5,6 @@ import {NavLink} from "react-router-dom";
 
 
 const Cart = (props) =>{
-  let Prise = 0,
-  vat = 112.87;
-
-  for (let i = 0; i < props.cart_product.length; i++) {
-    Prise+= Number(props.cart_product[i].Prise)*props.cart_product[i].Quantity
-  }
 
   return <section className={classes.section}>
     <div className={classes.Cart_body}>
@@ -70,7 +64,7 @@ const Cart = (props) =>{
             <h3>REVIEW YOUR CART</h3>
             <div className={classes.Review_el}>
               <div>YOUR CART</div>
-              <div>€.{Prise.toFixed(2)}</div>
+              <div>€.{props.Prise.toFixed(2)}</div>
             </div>
             <div className={classes.Review_el}>
               <div>SHIPPING</div>
@@ -78,11 +72,11 @@ const Cart = (props) =>{
             </div>
             <div className={classes.Review_el}>
               <div>vat</div>
-              <div>€.{vat}</div>
+              <div>€.{props.vat}</div>
             </div>
             <div className={classes.Review_elem}>
               <div>ORDER TOTAL</div>
-              <div>€.{(vat + Prise).toFixed(2)}</div>
+              <div>€.{(props.vat + props.Prise).toFixed(2)}</div>
             </div>
             <div  className={classes.Checkout}>
               <NavLink to="/Cart/Checkout">

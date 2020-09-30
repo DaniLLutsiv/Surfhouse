@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/Surfhouse/static/css/main.59f7f785.chunk.css",
+    "main.js": "/Surfhouse/static/js/main.22f30d5d.chunk.js",
+    "main.js.map": "/Surfhouse/static/js/main.22f30d5d.chunk.js.map",
+    "runtime-main.js": "/Surfhouse/static/js/runtime-main.2cc77fc6.js",
+    "runtime-main.js.map": "/Surfhouse/static/js/runtime-main.2cc77fc6.js.map",
+    "static/js/2.764e4fb7.chunk.js": "/Surfhouse/static/js/2.764e4fb7.chunk.js",
+    "static/js/2.764e4fb7.chunk.js.map": "/Surfhouse/static/js/2.764e4fb7.chunk.js.map",
+    "static/css/3.fc176222.chunk.css": "/Surfhouse/static/css/3.fc176222.chunk.css",
+    "static/js/3.cb13154e.chunk.js": "/Surfhouse/static/js/3.cb13154e.chunk.js",
+    "static/js/3.cb13154e.chunk.js.map": "/Surfhouse/static/js/3.cb13154e.chunk.js.map",
+    "static/css/4.881e09ff.chunk.css": "/Surfhouse/static/css/4.881e09ff.chunk.css",
+    "static/js/4.3b72c7c7.chunk.js": "/Surfhouse/static/js/4.3b72c7c7.chunk.js",
+    "static/js/4.3b72c7c7.chunk.js.map": "/Surfhouse/static/js/4.3b72c7c7.chunk.js.map",
+    "static/css/5.881e09ff.chunk.css": "/Surfhouse/static/css/5.881e09ff.chunk.css",
+    "static/js/5.b6002167.chunk.js": "/Surfhouse/static/js/5.b6002167.chunk.js",
+    "static/js/5.b6002167.chunk.js.map": "/Surfhouse/static/js/5.b6002167.chunk.js.map",
+    "static/css/6.1dcb5f3d.chunk.css": "/Surfhouse/static/css/6.1dcb5f3d.chunk.css",
+    "static/js/6.df6900ba.chunk.js": "/Surfhouse/static/js/6.df6900ba.chunk.js",
+    "static/js/6.df6900ba.chunk.js.map": "/Surfhouse/static/js/6.df6900ba.chunk.js.map",
+    "index.html": "/Surfhouse/index.html",
+    "precache-manifest.9f9f3a89dfff57dbddd8c185d8d066f2.js": "/Surfhouse/precache-manifest.9f9f3a89dfff57dbddd8c185d8d066f2.js",
+    "service-worker.js": "/Surfhouse/service-worker.js",
+    "static/css/3.fc176222.chunk.css.map": "/Surfhouse/static/css/3.fc176222.chunk.css.map",
+    "static/css/4.881e09ff.chunk.css.map": "/Surfhouse/static/css/4.881e09ff.chunk.css.map",
+    "static/css/5.881e09ff.chunk.css.map": "/Surfhouse/static/css/5.881e09ff.chunk.css.map",
+    "static/css/6.1dcb5f3d.chunk.css.map": "/Surfhouse/static/css/6.1dcb5f3d.chunk.css.map",
+    "static/css/main.59f7f785.chunk.css.map": "/Surfhouse/static/css/main.59f7f785.chunk.css.map",
+    "static/js/2.764e4fb7.chunk.js.LICENSE.txt": "/Surfhouse/static/js/2.764e4fb7.chunk.js.LICENSE.txt",
+    "static/media/Contact.module.css": "/Surfhouse/static/media/contact.612ce9ec.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2cc77fc6.js",
+    "static/js/2.764e4fb7.chunk.js",
+    "static/css/main.59f7f785.chunk.css",
+    "static/js/main.22f30d5d.chunk.js"
+  ]
+}

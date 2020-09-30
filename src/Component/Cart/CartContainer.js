@@ -19,6 +19,13 @@ import Articles from '../Windsurf/Nav/Articles/Articles';
 
 const CartContainer = (props) =>{
 
+  let Prise = 0,
+  vat = 112.87;
+
+  for (let i = 0; i < props.cart_product.length; i++) {
+    Prise+= Number(props.cart_product[i].Prise)*props.cart_product[i].Quantity
+  }
+
   return <section className={classes.section}>
     <div className={classes.Blue}>
           <div className={classes.Top}>
@@ -44,16 +51,12 @@ const CartContainer = (props) =>{
               <NavLink className={classes.NavLink} to="/" onClick={() => {props.ChangeUrl('','')}}>&#171; Back to previous page</NavLink>
             </div>
 
-              <Route path="/Cart/Checkout" render={ () => <Checkout Prise={props.Prise} cart_product={props.Product}/> }/>
+              <Route path="/Cart/Checkout" render={ () => <Checkout vat={vat} Prise={Prise} cart_product={props.Product}/> }/>
 
-
-              <Route exact path="/Cart" render={ () => <Cart SurfProduct={props.SurfProduct} SaleProducts={props.SaleProducts} ActivePageSale={props.ActivePageSale} 
-              cart_product={props.Product} ActivePageFromSurfApparel={props.ActivePageFromSurfApparel} Prise={props.Prise}
+              <Route exact path="/Cart" render={ () => <Cart vat={vat} Prise={Prise} SurfProduct={props.SurfProduct} SaleProducts={props.SaleProducts} ActivePageSale={props.ActivePageSale} 
+              cart_product={props.cart_product} ActivePageFromSurfApparel={props.ActivePageFromSurfApparel}
               NewActiveSlideProduct={props.NewActiveSlideProduct} DeleteElemFromCart={props.DeleteElemFromCart} QuantityChange={props.QuantityChange}/> }/>
 
-
-              
-              
             </div>
           </div>
           <div className={classes.Instagram}>
@@ -80,8 +83,7 @@ const mapStateToProps = (state) => {
       SaleProducts:state.Products.SaleProducts,
       ActivePageFromSurfApparel:state.Products.ActivePageFromSurfApparel,
       SurfProduct:state.Products.SurfProduct,
-      Product:state.Cart.Product,
-      Prise:state.Cart.Prise      
+      cart_product:state.Cart.Product,
     }
 }
 

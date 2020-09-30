@@ -1,3 +1,8 @@
+const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART',
+DELETE_ELEM_FROM_CART = 'DELETE_ELEM_FROM_CART',
+CHANGE_QUANTITY = 'CHANGE_QUANTITY',
+DELETE_CART = 'DELETE_CART'
+
 let initialState = { 
 	Product:[{img:`https://img.klubok.com/img/used/2020/04/22/25318/25318676_2.jpg`,text:'Surf Apparel',Quantity:1,Prise:'36.55',Sale:'',id:1, 
 		QuickOverview:`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. When an unknown printer took a galley of type.`,
@@ -10,31 +15,32 @@ let initialState = {
 const CartReducer = (state = initialState , action) => {
 
 	switch(action.type){
-		case 'ADD-PRODUCT-TO-CART' :
+		case ADD_PRODUCT_TO_CART :
 		action.product.Quantity = action.Quantity
 		return{
 			...state,	
 			Product : [...state.Product, action.product ]
 		}
-		case 'DELETE-ELEM-FROM-CART':
+		case DELETE_ELEM_FROM_CART:
 		return{
 			...state,
 			Product: state.Product.filter((el,index) => index !== action.id)
 		}
-		case 'DELETE-CART':
+		case DELETE_CART:
 		return{
 			...state,
 			Product: []
 		}
-		case 'CHANGE-QUANTITY' :
-		if (action.num<1) {action.num = 1}
+		case CHANGE_QUANTITY :
+		let num;
+		if (action.num < 1) {num = 1}else{ num = action.num}
 		return{
 			...state,
 			Product: state.Product.map((item,index) => {
 		        if(index === action.index) {
 		          return {
 		            ...item,
-		            Quantity: action.num,
+		            Quantity: num
 		          }
 		        }
 		        return item;
@@ -48,20 +54,20 @@ const CartReducer = (state = initialState , action) => {
 
 export const AddProductToCart = (product,Quantity) => {
 	return {
-		type:'ADD-PRODUCT-TO-CART',
+		type: ADD_PRODUCT_TO_CART,
 		product,
 		Quantity
 	}
 }
 export const DeleteElemFromCart = (id) => {
 	return {
-		type:'DELETE-ELEM-FROM-CART',
+		type: DELETE_ELEM_FROM_CART,
 		id
 	}
 }
 export const QuantityChange = (num,index) =>{
 	return {
-		type:'CHANGE-QUANTITY',
+		type: CHANGE_QUANTITY,
 		num,
 		index
 	}
@@ -69,7 +75,7 @@ export const QuantityChange = (num,index) =>{
 
 export const DeleteCart = () => {
 	return {
-		type:'DELETE-CART'
+		type: DELETE_CART
 	}
 }
 

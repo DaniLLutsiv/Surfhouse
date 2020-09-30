@@ -240,44 +240,35 @@ const ProductReducer = (state = initialState , action) => {
 			style : 'auto'
 		}
 		case 'CHANGE-QUANTITY' :
-		if (action.num<1) {action.num = 1}
+		const num = action.num;
+		if (action.num<1) {num = 1}
 		return{
 			...state,	
-			Quantity : action.num
+			Quantity : num
 		}
 		
-		
 		case 'NEW-ACTIVE-SLIDE-PRODUCT-NEW-PRODUCT':
-			if (action.ActivePageNewProducts < 1) {action.ActivePageNewProducts = 1}
-			if (action.ActivePageNewProducts > Math.ceil(state.NewProducts.length/6)) { action.ActivePageNewProducts = 1}
 			return{
 				...state,	
-				ActivePageNewProducts:action.ActivePageNewProducts
+				ActivePageNewProducts: NewActionSlideProduct(action.ActivePageNewProducts,state.NewProducts.length,6)
 			}
 
-
 		case 'NEW-ACTIVE-SLIDE-PRODUCT-TOP-PRODUCT':
-			if (action.ActivePageNewProducts < 1) {action.ActivePageNewProducts = 1}
-			if (action.ActivePageNewProducts > Math.ceil(state.NewProducts.length/3)) { action.ActivePageNewProducts = 1}
 			return{
 				...state,	
-				ActivePageTopProducts:action.ActivePageNewProducts
+				ActivePageTopProducts: NewActionSlideProduct(action.ActivePageNewProducts,state.TopProducts.length,3)
 			}
 		
 		case 'NEW-ACTIVE-SLIDE-PRODUCT-SALE-PRODUCT':
-			if (action.ActivePageNewProducts < 1) {action.ActivePageNewProducts = 1}
-			if (action.ActivePageNewProducts > Math.ceil(state.NewProducts.length/3)) { action.ActivePageNewProducts = 1}
 			return{
 				...state,	
-				ActivePageSaleProducts:action.ActivePageNewProducts
+				ActivePageSaleProducts: NewActionSlideProduct(action.ActivePageNewProducts,state.SaleProducts.length,3)
 			}
 		
 		case 'NEW-ACTIVE-SLIDE-PRODUCT-SURFAPPAREL':
-			if (action.ActivePageNewProducts < 1) {action.ActivePageNewProducts = 1}
-			if (action.ActivePageNewProducts > Math.ceil(state.SurfProduct.length/state.LengthSurfApparel)) {action.ActivePageNewProducts = 1}
 			return{
 				...state,	
-				ActivePageFromSurfApparel:action.ActivePageNewProducts
+				ActivePageFromSurfApparel: NewActionSlideProduct(action.ActivePageNewProducts,state.SurfProduct.length,state.LengthSurfApparel)
 			}
 		
 		case 'CHANGE-LENGTH-SURF-APPAREL':
@@ -288,6 +279,13 @@ const ProductReducer = (state = initialState , action) => {
 		default:
 			return state;	
 	} 	
+}
+
+const NewActionSlideProduct = (ActivePageNewProducts,NewProductsLength,length) =>{
+	const active = ActivePageNewProducts;
+	if (ActivePageNewProducts < 1) {active = 1}
+	if (ActivePageNewProducts > Math.ceil(NewProductsLength/length)) { active = 1}
+	return active
 }
 
 export const NewStyle = () => {
@@ -348,7 +346,7 @@ export const DelateParams = () => {
 	}
 }
 
-
+	
 
 
 export default ProductReducer;

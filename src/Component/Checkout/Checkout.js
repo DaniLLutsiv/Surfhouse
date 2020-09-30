@@ -2,12 +2,6 @@ import React, { useState } from 'react'
 import classes from './Checkout.module.css'
 
 const Checkout = (props) =>{
-  let Prise = 0,
-  vat = 112.87;
-
-  for (let i = 0; i < props.cart_product.length; i++) {
-    Prise+= Number(props.cart_product[i].Prise)*props.cart_product[i].Quantity
-  }
 
   const [color1, changeColor1] = useState(false);
   const [color2, changeColor2] = useState(true);
@@ -118,7 +112,7 @@ const Checkout = (props) =>{
           <h3 className={classes.Review_H3}>REVIEW YOUR CART</h3>
           <div className={classes.Review_el}>
             <div>YOUR CART</div>
-            <div>€.{Prise.toFixed(2)}</div>
+            <div>€.{props.Prise.toFixed(2)}</div>
           </div>
           <div className={classes.Review_el}>
             <div>SHIPPING</div>
@@ -126,11 +120,11 @@ const Checkout = (props) =>{
           </div>
           <div className={classes.Review_el}>
             <div>vat</div>
-            <div>€.{vat}</div>
+            <div>€.{props.vat}</div>
           </div>
           <div className={classes.Review_elem}>
             <div>ORDER TOTAL</div>
-            <div>€.{(vat + Prise).toFixed(2)}</div>
+            <div>€.{(props.vat + props.Prise).toFixed(2)}</div>
           </div>
           <div  className={classes.Checkout}>
             <div>

@@ -14,12 +14,7 @@ let initialState = {
 const InstagramReducer = (state = initialState , action) => {
 
 	switch(action.type){
-		case 'NEW-STYLE' :
-		return{
-			...state,	
-			style : 'auto'
-		}
-
+		
 		default:
 			return state;	
 	} 	
